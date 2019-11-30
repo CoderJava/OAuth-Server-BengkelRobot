@@ -8,7 +8,7 @@ To run this repo, please follow these command :
 
     `mvn clean spring-boot:run`
 
-2. Launch POSTMAN to generate TOKEN
+2. Launch INSOMNIA to generate TOKEN
 
     ![Authorization Tab](img/auth.png "Authorization Tab")
 
