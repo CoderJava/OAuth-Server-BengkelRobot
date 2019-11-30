@@ -18,7 +18,7 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "tbl_user")
+@Table(name = "pengguna")
 public class User {
 
     @Id
@@ -32,8 +32,8 @@ public class User {
     @JsonIgnore
     private String password;
 
-    @Column
-    private long salary;
+    /*@Column
+    private long salary;*/
 
     @Column
     private int age;
