@@ -1,4 +1,4 @@
-package com.hendisantika.config;
+package com.hendisantika.config.oauth;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -28,17 +28,6 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
 import javax.annotation.Resource;
-
-/**
- * Created by IntelliJ IDEA.
- * Project : spring-boot-security-oauth2-example
- * User: hendisantika
- * Email: hendisantika@gmail.com
- * Telegram : @hendisantika34
- * Date: 31/12/17
- * Time: 16.01
- * To change this template use File | Settings | File Templates.
- */
 
 @Configuration
 @EnableWebSecurity

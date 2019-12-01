@@ -1,20 +1,9 @@
-package com.hendisantika.model;
+package com.hendisantika.model.user;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
-
-/**
- * Created by IntelliJ IDEA.
- * Project : spring-boot-security-oauth2-example
- * User: hendisantika
- * Email: hendisantika@gmail.com
- * Telegram : @hendisantika34
- * Date: 31/12/17
- * Time: 15.45
- * To change this template use File | Settings | File Templates.
- */
 
 @Data
 @Entity

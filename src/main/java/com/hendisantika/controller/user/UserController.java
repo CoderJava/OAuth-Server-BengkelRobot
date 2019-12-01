@@ -1,4 +1,4 @@
-package com.hendisantika.controller;
+package com.hendisantika.controller.user;
 
 import com.hendisantika.model.User;
 import com.hendisantika.service.UserService;
@@ -6,17 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
-/**
- * Created by IntelliJ IDEA.
- * Project : spring-boot-security-oauth2-example
- * User: hendisantika
- * Email: hendisantika@gmail.com
- * Telegram : @hendisantika34
- * Date: 10/01/18
- * Time: 16.06
- * To change this template use File | Settings | File Templates.
- */
 
 @RestController
 @RequestMapping("/users")
