@@ -15,6 +15,10 @@ To run this repo, please follow these command :
     ![Header Tab](img/header.png "Header Tab")
 
     ![Body Tab](img/body.png "Body Tab")
+    
+3. Generate TOKEN by refresh_token
+
+    ![Generate Token by refresh Token](img/refresh_token.png "Generate Token by refresh Token")
 
 3. Accessing without Token
 
