@@ -27,10 +27,11 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     static final String CLIENT_ID = "bengkel-robot-client";
     static final String CLIENT_SECRET = "bengkel-robot-secret";
-    static final String GRANT_TYPE = "password";
+    static final String GRANT_TYPE_PASSWORD = "password";
+    static final String GRANT_TYPE_REFRESH_TOKEN = "refresh_token";
     static final String SCOPE_READ = "read";
     static final String SCOPE_WRITE = "write";
-    static final int ACCESS_TOKEN_VALIDITY_SECONDS = 1 * 60 * 60;
+    static final int ACCESS_TOKEN_VALIDITY_SECONDS = 1 * 60;
     static final int REFRESH_TOKEN_VALIDITY_SECONDS = 6 * 60 * 60;
 
     @Autowired
@@ -49,7 +50,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .inMemory()
                 .withClient(CLIENT_ID)
                 .secret(CLIENT_SECRET)
-                .authorizedGrantTypes(GRANT_TYPE)
+                .authorizedGrantTypes(GRANT_TYPE_PASSWORD, GRANT_TYPE_REFRESH_TOKEN)
                 .scopes(SCOPE_READ, SCOPE_WRITE)
                 .accessTokenValiditySeconds(ACCESS_TOKEN_VALIDITY_SECONDS).
                 refreshTokenValiditySeconds(REFRESH_TOKEN_VALIDITY_SECONDS);
@@ -57,7 +58,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
-        endpoints.tokenStore(tokenStore).userApprovalHandler(userApprovalHandler)
-                .authenticationManager(authenticationManager);
+        endpoints.tokenStore(tokenStore)
+                .authenticationManager(authenticationManager)
+                .userApprovalHandler(userApprovalHandler);
     }
 }
