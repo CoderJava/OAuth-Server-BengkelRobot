@@ -1,6 +1,6 @@
 package com.hendisantika.service.user;
 
-import com.hendisantika.model.user.User;
+import com.hendisantika.db.user.User;
 
 import java.util.List;
 
