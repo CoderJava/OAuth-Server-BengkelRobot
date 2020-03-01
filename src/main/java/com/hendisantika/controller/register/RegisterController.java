@@ -54,6 +54,13 @@ public class RegisterController {
             mapDataReturn.put("diagnotic", diagnostic);
             return new ResponseEntity<>(mapDataReturn, HttpStatus.BAD_REQUEST);
         }
+        User userLocal = userService.findUserByUsername(user.getUsername());
+        if (userLocal != null) {
+            diagnostic.setMessage("Username already exists. Please use another username.");
+            diagnostic.setStatus(HttpStatus.BAD_REQUEST.value());
+            mapDataReturn.put("diagnostic", diagnostic);
+            return new ResponseEntity<>(mapDataReturn, HttpStatus.BAD_REQUEST);
+        }
         User userResult = userService.save(user);
         diagnostic.setStatus(HttpStatus.CREATED.value());
         diagnostic.setMessage(HttpStatus.CREATED.name());
